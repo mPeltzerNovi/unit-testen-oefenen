@@ -9,7 +9,7 @@ public class Counter {
     }
 
     public void add(int[] numbers) {
-        this.addWithLoop(numbers);
+        total = this.addWithLoop(numbers);
 //        this.addWithStream(numbers);
     }
 
@@ -44,8 +44,14 @@ public class Counter {
     }
 
     public static int getMaxWithStream(int[] numbers) {
+
         return Arrays.stream(numbers).max().orElse(0);
     }
 
+    //Hier door op de rode getMaximum in "CounterTest" te drukken is de methode gekomen!!!
+    //Deze maken om de methode bij de eerst gemaakte test te bouwen
+    public int getMaximum(int[] numbers) {
+        return getMaxWithStream(numbers);
+    }
 }
 
